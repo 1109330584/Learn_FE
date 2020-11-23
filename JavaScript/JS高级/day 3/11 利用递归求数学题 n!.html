@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let sum = 1;
+        function fn(n) {
+            if(n==1){
+                return 1;
+            }
+            return n*fn(n-1);
+        }
+        console.log(fn(1));
+        // 有bug，当输入fn(0)时，报错。
+    </script>
+</body>
+
+</html>

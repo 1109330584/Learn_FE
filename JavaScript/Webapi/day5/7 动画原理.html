@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            position: absolute;
+            
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        // 通过定时器setInterval()不断移动盒子的位置
+        // 1 获得盒子的当前位置
+        // 2 让盒子在当前位置加上一个移动距离
+        // 3 利用定时器不断重复这个操作
+        // 4 加一个结束定时器的操作
+        // 5 元素要添加定位
+        
+        let div = document.querySelector('div');
+        let timer = setInterval(function(){
+            if(div.offsetLeft > 800){
+                clearInterval(timer);
+            }
+        div.style.left = div.offsetLeft + 50 + 'px';
+        },1000)
+    </script>
+</body>
+</html>

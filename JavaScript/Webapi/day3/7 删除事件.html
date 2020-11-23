@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: pink;
+            width: 100px;
+            height: 100px;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <script>
+        let divs = document.querySelectorAll('div');
+        // divs[0].addEventListener('click', function () {
+        //     alert(11);
+        //     // 传统方式解绑
+        //     divs[0].onclick = null;
+        // })
+        divs[0].onclick = function(){
+            alert(1);
+            this.onclick = null;
+        }
+
+        divs[1].addEventListener('click',fn)
+        function fn(){
+            alert(11);
+            this.removeEventListener('click',fn);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!-- 最大子数组 O(n) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getMaxSubSum(arr){
+            let maxSum = 0;
+            let huancunshu = 0;
+            for(let number of arr){
+                huancunshu +=number;
+                maxSum=Math.max(maxSum,huancunshu);
+                if(huancunshu<0) huancunshu = 0;
+            }
+            return maxSum;
+        }
+        alert(getMaxSubSum([1,2,-5,-67,16]));
+    </script>
+</body>
+</html>

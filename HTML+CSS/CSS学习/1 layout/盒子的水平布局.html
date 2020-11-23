@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width: 800px;
+            height: 300px;
+            border: 10px red solid;
+        }
+
+        .inner{
+            /* 若不写width，width的值默认就是auto */
+            width: 300px;
+            height: 300px;
+            background-color:turquoise;
+        }   
+        /* 
+        （margin-left/right）+（border-left/right）+（padding-left/right)+width = 其父元素内容区的宽度（必须满足）
+         */
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>

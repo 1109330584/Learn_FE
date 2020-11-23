@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 400px;
+            border-bottom: 1px black solid;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        .box input{
+            width: 300px;
+            height: 30px;
+            border: 0;
+            outline: none;
+            
+        }
+
+        img{
+             width: 24px;
+             position: absolute;
+             top: 0px;
+             right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <label for="">
+            <img src="img/close.png" alt="" id="eye">
+        </label>
+        <input type="password" id="pwd">
+    </div>
+    <script>
+        var eye = document.querySelector('#eye');
+        var pwd = document.querySelector('#pwd');
+
+        var flag=0;
+        eye.onclick = function(){
+            if(flag==0){
+                flag=1;
+                pwd.type = 'text';
+                eye.src="img/open.png"
+            } else{
+                flag=0;
+                pwd.type = 'password';
+                eye.src="img/close.png"
+            }
+        }
+    </script>
+</body>
+</html>

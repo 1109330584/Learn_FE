@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>1</div>
+    <span>2</span>
+    <script>
+        let div = document.querySelector('div');
+        // nextSibling 下一个兄弟节点 包括元素节点或者文本节点
+        console.log(div.nextSibling);
+        // previousSibling 上个兄弟节点 包括元素节点或者文本节点
+        console.log(div.previousSibling);
+
+        // nextElementSibling 下一个兄弟元素节点
+        console.log(div.nextElementSibling);
+        // previousElementSibling 上一个兄弟元素节点
+        console.log(div.previousElementSibling);
+
+
+        // 如何解决兼容性问题
+        let span = document.querySelector('span');
+        function getNextElementSibling(element){
+            let el = element;
+            while(el=el.nextSibling){
+                if(el.nodeType===1){
+                    return el;
+                }
+            }
+            return null;
+        }
+
+        console.log(getNextElementSibling(div));
+    </script>
+</body>
+</html>

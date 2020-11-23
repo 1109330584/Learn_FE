@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 对象身上系统自己添加一个 __proto__ 指向我们构造函数的原型对象
+        function Star(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        Star.prototype.sing = function () {
+            console.log("11");
+        }
+
+        let wyc = new Star('wyc', 22);
+        wyc.sing();
+
+        console.log(wyc.__proto__ === Star.prototype);
+        // 方法查找规则：首先看wyc对象身上是否有sing方法，如果有就执行这个对象上的sing
+        // 如果没有sing方法，因为有 __protp]o__ 的存在，就去构造函数原型对象prototype身上查找sing这个放大
+    </script>
+</body>
+
+</html>

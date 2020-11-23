@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            固定定位（fixed）：
+                固定定位也是一种绝对定位，所以固定定位大部分特点和绝对定位一样
+                    唯一不同的是固定定位永远参照于浏览器的视口进行定位
+        */
+        body{
+            height: 2000px;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: cyan;
+        }
+
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color:darkorange;
+            position: fixed;
+            top:0px;
+            left: 0px;
+        }
+
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color:red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+.top-ad{
+    width: 100%;
+    height: 120px;
+    background-color: #FE5038;
+}
+
+.top-warpper{
+    width: 100%;
+    height: 40px;
+    background-color: #333333;
+    line-height: 40px;
+}
+
+.top-warpper .line{
+    color: #3C423F;
+    padding:0 7px;
+}
+
+.top-warpper a{
+    font-size: 12px;
+    color: #B0B0B0;
+}
+.top-warpper a:hover{
+    color: #fff;
+}
+
+.top-list-left li,
+.top-list-middle li{
+    float: left;
+}
+
+.top-list-right,
+.top-list-middle{
+    float: right;
+}
+
+.top-list-middle{
+    margin-right: 28px;
+}
+
+.top-list-right a{
+    width: 120px;
+    text-align: center;
+}
+.top-list-right a:hover{
+    background-color: #fff;
+    color: #ff6700;
+}
+
+.header-warpper{
+    height: 100px;
+    background-color: red;
+    position: relative;
+}
+
+.header-warpper .mi-logo{
+    float: left;
+    margin-top: 23px;
+    overflow: hidden;
+    height: 55px;
+    width: 55px;
+    position: relative;
+}
+
+.header-warpper .mi-logo a{
+    position: absolute;
+    display: block;
+    width: 55px;
+    height: 55px;
+    left: 0;
+    background-color: #ff6700;
+    background-image: url(../img/mi-logo.png);
+    background-position: center;
+    transition: left 0.1s;
+}
+
+.header-warpper .home{
+    background-image: url(../img/mi-home.png);
+    left: -55px;
+}
+
+.header-warpper .mi-logo:hover .logo{
+    left: 55px;
+}
+.header-warpper .mi-logo:hover .home{
+    left: 0;
+}

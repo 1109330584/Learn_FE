@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Father(name, age) {
+            // this指向父构造函数的对象实例
+            this.name = name;
+            this.age = age;
+        }
+
+        function Son(name,age){
+            // this指向子构造函数的对象实例
+            Father.call(this,name,age);
+            this.score = score;
+        }
+
+        let wyc = new Son('wyc',22,100);
+        console.log(wyc);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>传统注册事件</button>
+    <button>方法监听注册事件</button>
+    <button>ie9</button>
+    <script>
+        let btns = document.querySelectorAll('button');
+        btns[1].addEventListener('click',function () {
+            alert(11)
+        })
+        btns[1].addEventListener('click',function () {
+            alert(12);
+        })
+        // attachEvent ie9浏览器独有
+        btns[2].attachEvent('onclick',function(){
+            alert(11);
+        })
+    </script>
+</body>
+
+</html>

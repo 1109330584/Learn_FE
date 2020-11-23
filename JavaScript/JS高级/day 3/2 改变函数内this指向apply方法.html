@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let o = {
+            name: 'andy'
+        };
+
+        function fn(arr){
+            console.log(this);
+            console.log(arr);
+        }
+        fn.apply(o,['wyc'])
+
+        // apply也是调用函数，改变函数内部this的指向
+        // 但是参数必须是数组（伪数组）
+        // apply的主要应用
+        // Math.max()
+        let arr = [1,55,636,234,213];
+        console.log(Math.max.apply(Math,arr));;
+        console.log(Math.min.apply(Math,arr));;
+
+    </script>
+</body>
+</html>

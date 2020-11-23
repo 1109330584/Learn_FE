@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易新闻列表</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        a{
+            /* 去除下划线 */
+            text-decoration: none;
+        }
+
+        .news-wrapper{ 
+            width: 300px;
+            height: 358px;
+            background-color: #fff;
+            margin: 100px auto;
+
+            /* 设置上边框 */
+            border-top: 1px solid #ddd;
+        }
+        .news-title{
+            /* 为了边框和文字宽度一致，需要将h2装换为行内元素 */
+            display: inline-block;
+            height: 32px;
+            margin-top:-1px;
+            padding-top: 10px;
+
+
+            /* 设置上边框 */
+            border-top: 1px red solid;
+        }
+        .news-title a{
+            /* 设置文字加粗 */
+            font-weight: bold;
+            font-size: 16px;
+            color: black;
+        }
+
+        .news-title a:hover{
+            color: red;
+        }
+
+        .news-img{
+            height: 150px;
+            width: 300px;
+        }
+
+        /* 设置图片文字效果 */
+        .news-img .img-title{
+            margin-top: -28px;
+            color: #fff;
+            font-weight: bold;
+            padding-left: 20px;
+        }
+
+        /* 设置新闻列表 */
+        .news-list{
+            padding-top: 5px;
+        }
+        .news-list li{
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        .news-list li a{
+            color: #666666;
+        }
+
+        /* 伪元素 */
+        .news-list li::before{
+            content: "■";
+            color: #666666;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+
+        .news-list li a:hover{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 创建新闻列表的外侧的容器 -->
+    <div class="news-wrapper">
+        <!-- 创建一个标题标签 -->
+        <h2 class="news-title">
+            <a href="#">体育</a>
+        </h2>
+
+        <!-- 创建一个图片容器 -->
+        <div class="news-img">
+            <a href="#">
+                <img src="../img/2/1.webp" alt="">
+                <!-- 创建图片标题 -->
+                <h2 class="img-title">
+                    中超保级组：建业1-0卓尔抢占先机
+                </h2>
+            </a>
+        </div>
+
+        <!-- 新闻列表 -->
+        <ul class="news-list">
+            <li>
+                <a href="#">海归神兽补齐辽篮最大短板</a>
+            </li>
+
+            <li>
+                <a href="#">7-2虐利物浦后 又1-0绝杀!英超唯一全胜队</a>
+            </li>
+
+            <li>
+                <a href="#">埃弗顿VS利物浦：一桩事后张扬的凶杀案</a>
+            </li>
+
+            <li>
+                <a href="#">埃弗顿和安切洛蒂的野望</a>
+            </li>
+        </ul>
+
+    </div>
+</body>
+</html>

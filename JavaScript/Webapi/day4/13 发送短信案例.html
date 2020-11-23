@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 200px;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <input type="number">
+        <button>发送短信</button>
+    </div>
+    <script>
+        let btn = document.querySelector('button');
+        let s = 10;
+        let time = null;
+        btn.addEventListener('click', function () {
+            btn.disabled = true;
+            time = setInterval(function () {
+                if (s == 0) {
+                    clearInterval(time);
+                    btn.disabled = false;
+                    btn.innerHTML = '发送短信';
+                    s = 10;
+                } else {
+                    btn.innerHTML = s + 's后再次发送';
+                    s--;
+                }
+            }, 1000)
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    <button>5</button>
+    <script>
+        let btns = document.querySelectorAll('button');
+        for(let i=0;i<btns.length;i++){
+            btns[i].onfocus = function(){
+                this.className='red';
+                btns[i].onblur = function(){
+                    btns[i].className = '';
+            }
+        }
+            }
+            
+    </script>
+</body>
+</html>

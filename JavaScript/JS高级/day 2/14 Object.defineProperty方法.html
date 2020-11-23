@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Object.defineProperty() 定义新属性或修改原有属性
+        let obj = {
+            id: 1,
+            name: '小米',
+            price: 1999
+        }
+        Object.defineProperty(obj, 'num', {
+            value: 1000
+        })
+        Object.defineProperty(obj, 'id', {
+            // writable 属性值是否可以修改 默认false
+            writable: false
+        })
+        Object.defineProperty(obj, 'address', {
+            value:'林科大',
+            // enumerable 目标属性是否可以被遍历 默认false
+            enumerable:false,
+            // configurable 目标属性是否可以被删除或被再次修改 默认false
+            configurable:false
+        })
+    </script>
+</body>
+
+</html>

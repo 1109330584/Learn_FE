@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 思考题1
+        // var name = 'The Window'; //此处用let声明的是局部变量，用var声明的是全局变量
+        // let object = {
+        //     name: 'My Object',
+        //     getNameFunc: function () {
+        //         return function () {
+        //             return this.name;
+        //         }
+        //     }
+        // };
+        // console.log(object.getNameFunc()())
+
+        // let f = object.getNameFunc();
+        // let f = function () {
+        //     return this.name;
+        // }
+        // f();
+
+        //思考题2 
+        var name = 'The Window';
+        let object = {
+            name : 'My Object',
+            getNameFunc:function(){
+                let that = this;
+                return function(){
+                    return that.name;
+                };
+            }
+        };
+        console.log(object.getNameFunc()());
+    </script>
+</body>
+
+</html>

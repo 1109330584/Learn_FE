@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="demo">
+        <div class="box">
+            <span class="erweima"></span>
+        </div>
+    </div>
+    <script>
+        let box = document.querySelector('.box');
+        // node.parentNodes 父节点
+        console.log(box.parentNode);
+        // node.childsNodes 子节点 包含元素节点 文本节点等
+        // console.log(box.childNodes)
+
+        // 获得子元素中的元素节点
+        for(let i=0;i<box.childNodes.length;i++){
+            if(box.childNodes[i].nodeType===1){
+                console.log(box.childNodes[i]);
+            }
+        }
+
+        // children 获取所有的子元素节点
+        console.log(box.children);
+    </script>
+</body>
+</html>

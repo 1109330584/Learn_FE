@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 浅拷贝只是拷贝一层，更深层次对象级别的只拷贝引用
+        // 深拷贝拷贝多层，每一级别的数据都会拷贝
+        let obj={
+            id:1,
+            name:'wyc',
+            // 更深层次的对象msg，浅拷贝只是引用
+            msg:{
+                age:18
+            }
+        };
+        let o ={};
+        // for(let k in obj){
+        //     o[k] = obj[k];
+        // }
+
+        Object.assign(o,obj); //浅拷贝
+        console.log(o);
+    </script>
+</body>
+</html>

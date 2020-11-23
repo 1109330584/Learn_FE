@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const s1 = new Set();
+        console.log(s1.size);
+
+        const s2 = new Set(['a','b']);
+        console.log(s2.size);
+
+        const s3 = new Set(['a','a','b','b','c'])
+        console.log(s3.size);
+
+        // 使用add方法向set结构中添加值
+        const s4 = new Set();
+        s4.add('a').add('b')
+        console.log(s4);
+
+        // 使用delete方法从set结构中删除值
+        const r1 = s4.delete('c');
+        console.log(r1);
+    </script>
+</body>
+</html>

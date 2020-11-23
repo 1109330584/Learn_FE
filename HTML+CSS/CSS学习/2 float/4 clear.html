@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            float: left;
+        }
+        .box2{
+            width: 400px;
+            height: 400px;
+            background-color: blueviolet;
+            float: right;
+        }
+
+        /* 
+            clear的作用：清楚浮动元素对当前元素所产生的影响
+            可选值：
+                left/right 清除左侧/右侧浮动元素对当前元素的影响
+                both 清除两侧中最大影响的一侧
+
+            原理：
+                设置清除浮动以后，浏览器会自动为元素添加一个上外边距
+                    以使其位置不受其他元素的影响
+        */
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: crimson;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

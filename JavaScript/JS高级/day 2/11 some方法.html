@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // some()方法用于检测数组中的元素是否满足指定条件，返回的是布尔值
+        // 如果找到第一个满足条件的元素，则终止循环，不再继续查找
+        let arr = [123, 145, 1651];
+        let arr1 = arr.some(function (value, index) {
+            return value === 123;
+        })
+        console.log(arr1);
+
+        // filter 也是查找满足条件的元素 返回的是一个数组 而且把所有满足条件的元素返回
+        // some 也是查找满足条件的元素 返回的是一个布尔值 查找到一个满足条件的元素就终止循环
+    </script>
+</body>
+
+</html>

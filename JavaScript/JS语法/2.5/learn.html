@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Accumnlator(startingValue) {
+            this.value = startingValue;
+            this.read = function () {
+                this.value += +prompt("?", "")
+            }
+        }
+        let accumnlator = new Accumnlator(1);
+        accumnlator.read();
+        accumnlator.read();
+        alert(accumnlator.value);
+    </script>
+</body>
+
+</html>

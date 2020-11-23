@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 模板字符串中可以解析变量 ${变量名},反引号
+        // 模板字符串中可以换行
+        // 在模板字符串中可以调用函数
+        let result = {
+            name:'wyc',
+            age:22,
+            sex:'男'
+        }
+        let html = `<div>
+            <span>${result.name}</span>
+            <span>${result.age}</span>
+            <span>${result.sex}</span>
+            </div>`
+        console.log(html);
+            
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!-- 构造函数 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(name,age,gender){
+            this.name=name;
+            this.age=age;
+            this.gender=gender;
+            this.sayName=sn;
+        }
+        function sn(){
+            alert(this.name);
+        }
+        function Dog(name,age){
+            this.name=name;
+            this.age=age;
+            this.say=function(){
+                alert("wangwang!");
+            };
+        }
+        let person=new Person("wyc",20,"man");
+        let dog=new Dog("dahuang",3);
+        console.log(person.sayName());
+        //console.log(dog.say());
+    </script>
+</body>
+</html>

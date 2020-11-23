@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .warpper{
+            margin: 100px auto;
+            width: 400px;
+        }
+
+        .pwd{
+            outline: none;
+        }
+
+        .message{
+            font-size: 12px;
+            background: url(img/mess.png) no-repeat left center;
+            padding-left: 20px;
+            color: #999;
+        }
+
+        .wrong{
+            background: url(img/wrong.png) no-repeat left center;
+            color: red;
+        }
+
+        .right{
+            background: url(img/right.png) no-repeat left center;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="warpper">
+        <input type="password" class="pwd">
+        <i class="message">请输入6~16位密码</i>
+    </div>
+    <script>
+        let pwd = document.querySelector('.pwd');
+        let message = document.querySelector('.message');
+        pwd.onblur = function(){
+            // 表单里的长度 pwd.value.length
+            if(this.value.length<6||this.value.length>16){
+                message.className='message wrong';
+                message.innerHTML='您的密码不符合要求'
+            } else{
+                message.className='message right';
+                message.innerHTML='您的密码符合要求';
+            }
+        }
+    </script>
+</body>
+</html>

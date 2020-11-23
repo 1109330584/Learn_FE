@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 很多情况下，我们需要手动利用constructor 这个属性指回 原来的构造函数
+        function Star(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        Star.prototype = {
+            // 如果我们修改了原来的原型对象，给原型对象赋值的是一个对象，则必须手动的利用constructor指回原来的构造函数
+            constructor:Star,
+            sing:function(){console.log(11);},
+            movie:function(){console.log(22);}
+        }
+
+        let wyc = new Star('wyc', 22);
+        wyc.sing();
+        wyc.movie();
+
+        console.log(Star.prototype.constructor);
+        console.log(wyc.__proto__.constructor);
+    </script>
+</body>
+
+</html>

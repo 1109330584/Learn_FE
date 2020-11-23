@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>按钮</button>
+    <script>
+        let o = {
+            name: 'andy'
+        }
+
+        function fn(a,b) {
+            console.log(this);
+            console.log(a+b);
+        }
+
+        let f = fn.bind(o,1,5);
+        f();
+        // 不调用原来的函数 可以改变原来函数内部的this 指向
+        // 返回的是原函数改变this之后产生的新函数
+        // 有时候函数不用立即调用，但是需要改变函数内部this指向时就用bind
+
+        let btn = document.querySelector('button');
+        btn.onclick = function(){
+            this.disabled = true;
+            setTimeout(function(){
+                this.disabled = false;  //定时器函数中的this指向的是window
+            }.bind(this),3000)
+        }
+    </script>
+</body>
+</html>

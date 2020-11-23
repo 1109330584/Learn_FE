@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            text-align: center;
+            margin: 200px auto;
+            overflow: hidden;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            margin: 50px;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+
+    <script>
+        // 三个阶段分别是：捕获阶段 当前目标阶段 冒泡阶段
+        // 捕获阶段 如果addEventListener 第三个参数是true 那么则处于捕获阶段 document > html > body > father > son
+
+        // let son = document.querySelector('.son');
+        // son.addEventListener('click',function(){
+        //     alert(2);
+        // },true);
+
+        // let father = document.querySelector('.father');
+        // father.addEventListener('click',function(){
+        //     alert(1);
+        // },true);
+
+
+        // 捕获阶段 如果addEventListener 第三个参数是false或者不写 那么则处于冒泡阶段 document < html < body < father < son 
+        let son = document.querySelector('.son');
+        son.addEventListener('click',function(){
+            alert(2);
+        });
+
+        let father = document.querySelector('.father');
+        father.addEventListener('click',function(){
+            alert(1);
+        });
+    </script>
+</body>
+</html>

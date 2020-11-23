@@ -1,0 +1,26 @@
+<!--  else if 的用法 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age = prompt('How old are you?','');
+        let message;
+        if (age<3){
+            message = 'hi baby!';
+        } else if(age<18){
+            message = 'hello!';
+        } else if(age<100){
+            message = 'greeting!';
+        } else{
+            message = 'What an unusual age!';
+        }
+        alert(message);
+    </script>
+</body>
+</html>

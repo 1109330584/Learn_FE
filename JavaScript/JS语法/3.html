@@ -1,0 +1,41 @@
+<!-- 原型对象 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(name,age){
+            this.name=name;
+            this.age=age;
+        }
+        Person.prototype.sayName=function(){
+            alert(this.name);
+        }
+
+        let per=new Person("wyc",20);
+        let per1 = new Person("aa",19);
+        let per2 = new Person("bb",29);
+        let per3 = new Person("cc",15);
+        let per4 = new Person("dd",12);
+
+        let perArr = [per,per1,per2,per3,per4];
+
+        // console.log(perArr[2].age);
+
+        function getAdult(arr){
+            let newArr=[];
+            for(let i=0;i<arr.length;i++){
+                if(arr[i].age>=18) newArr.push(arr[i])
+            }
+            return newArr;
+        }
+    
+        let result=getAdult(perArr);
+        console.log(result);
+    </script>
+</body>
+</html>

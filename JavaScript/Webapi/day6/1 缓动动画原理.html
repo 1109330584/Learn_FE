@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn600">点击600</button>
+    <button class="btn1000">点击1000</button>
+    <div></div>
+    <script>
+        // 缓动动画公式：（目标值-现在的位置）/ 10
+        let div = document.querySelector('div');
+        let btn600 = document.querySelector('.btn600')
+        let btn1000 = document.querySelector('.btn1000')
+
+        btn600.addEventListener('click', function () {
+            animate(div, 600);
+        })
+        btn1000.addEventListener('click', function () {
+            animate(div, 1000,function(){
+                div.style.backgroundColor = 'red';
+            });
+        })
+        function animate(obj, target,callback) {
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function () {
+                // 步长值取整 Math.ceil()
+                obj.step = (target - obj.offsetLeft) / 10;
+                obj.step = obj.step > 0 ? Math.ceil(obj.step) : Math.floor(obj.step);
+                if (div.offsetLeft == target) {
+                    clearInterval(obj.timer);
+                    if(callback){
+                        callback();
+                    }
+                }
+                obj.style.left = obj.offsetLeft + obj.step + 'px';
+
+            }, 30)
+        }
+
+
+    </script>
+</body>
+
+</html>

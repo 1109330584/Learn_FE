@@ -1,0 +1,25 @@
+<!-- 最大子数组 O(n²) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getMaxSubSum(arr){
+            let maxSum = 0;
+            for(let i = 0;i<arr.length;i++){
+                let sumFixedStart = 0;
+                for(let j = i;j<arr.length;j++){
+                    sumFixedStart += arr[j];
+                    maxSum=Math.max(maxSum,sumFixedStart);
+                }
+            }
+            return maxSum;
+        }
+        alert(getMaxSubSum([-1,2,4,6,-9]));
+    </script>
+</body>
+</html>

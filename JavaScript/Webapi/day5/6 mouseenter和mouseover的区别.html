@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            width: 400px;
+            height: 400px;
+            margin: 200px auto;
+            background-color: black;
+        }
+
+        .son{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+
+    <script>
+        let father = document.querySelector('.father');
+        let son = document.querySelector('.son');
+
+        // mouseover 鼠标经过自身盒子会出发，经过子盒子也会出发
+        // mouseenter 只会经过自身盒子出发，不会冒泡
+        // 跟mouseenter搭配 鼠标离开 mouseleave
+         father.addEventListener('mouseover',function(){
+             console.log(11);
+         })
+
+         father.addEventListener('mouseenter',function(){
+             console.log(22);
+         })
+    </script>
+
+</body>
+</html>

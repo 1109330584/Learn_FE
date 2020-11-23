@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            text-align: center;
+            margin: 200px auto;
+            overflow: hidden;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            margin: 50px;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">11</div>
+    </div>
+
+    <script>
+        // 阻止冒泡 stopPropagation()
+        let son = document.querySelector('.son');
+        son.addEventListener('click',function(e){
+            alert('son');
+            e.stopPropagation(); //propagation 传播
+            e.cancelBubble = true; //非标准 cancel 取消 bubble 泡泡
+        });
+
+        let father = document.querySelector('.father');
+        father.addEventListener('click',function(){
+            alert('father');
+        });
+    </script>
+</body>
+</html>

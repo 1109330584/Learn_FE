@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // filter()方法创建一个新数组，新数组的元素是通过检查指定数组中符合条件的所有元素，主要用于筛选数组
+        let arr1 = [12, 151, 65, 23, 677];
+        let arr2 = arr1.filter(function (value, index, array) {
+            return value >= 100;
+        })
+        console.log(arr2);
+    </script>
+</body>
+
+</html>

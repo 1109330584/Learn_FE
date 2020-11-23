@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- H5规定自定义属性data-开头作为属性名并且赋值 -->
+    <div data-index="2" data-time="21" data-list-name='andy'></div>
+    <script>
+        let div = document.querySelector('div');
+        console.log(div.getAttribute('data-index'))
+        // H5新增获取自定义属性的方法
+        // dataset是一个集合，里面存放了所有以data-开头的属性名
+        console.log(div.dataset.index);
+        console.log(div.dataset);
+        console.log(div.dataset['index']);
+        // 如果自定义属性里有多个-连接词，我们获取的时候采取 驼峰命名法
+        console.log(div.dataset.listName);
+        console.log(div.dataset['listName']);
+
+    </script>
+</body>
+</html>

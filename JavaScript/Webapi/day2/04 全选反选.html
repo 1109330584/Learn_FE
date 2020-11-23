@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="j_cbAll"></th>
+                <th>商品</th>
+                <th>价钱</th>
+            </tr>
+        </thead>
+        <tbody id="j_td">
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>iPhone8</td>
+                <td>8000</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>iPad Pro</td>
+                <td>5000</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>iPad Air</td>
+                <td>2000</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Apple Watch</td>
+                <td>2000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        // 全选和取消全选的做法
+        let j_cbAll = document.querySelector('#j_cbAll');
+        let j_tds = document.querySelector('#j_td').querySelectorAll('input');
+
+        j_cbAll.onclick = function () {
+            // 当前的选中状态 this.checked
+            // 全选和取消全选
+            for (let i = 0; i < j_tds.length; i++) {
+                j_tds[i].checked = this.checked;
+            }
+        }
+
+        for (let i = 0; i < j_tds.length; i++) {
+            j_tds[i].onclick = function () {
+                // flag控制全选按钮是否选中
+                let flag = true;
+                // 每次点击下面的复选框都要循环检查4个按钮是否全被选中
+                for (let i = 0; i < j_tds.length; i++) {
+                    if (!j_tds[i].checked) {
+                        flag = false;
+                    }
+                }
+                j_cbAll.checked = flag;
+            }
+        }
+    </script>
+</body>
+
+</html>

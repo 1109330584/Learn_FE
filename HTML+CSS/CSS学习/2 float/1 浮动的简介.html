@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            使用float属性来设置元素的浮动
+                可选值：
+                none 默认值，元素不浮动
+                left/right 元素向左/向右浮动
+                
+            元素设置浮动以后，水平布局的等式便不需要强制成立
+                元素设置浮动后，会从文档流中脱离，不占据文档流的位置
+        */
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: orangered;
+            float: right;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: palegreen;
+            float: right;
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: black;float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

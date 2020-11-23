@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 构造函数存在浪费内存的问题
+
+        // 原型是一个对象，我们也称prototype为原型对象
+        // 原型的作用是共享方法，节约内存
+        function Star(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        Star.prototype.sing = function(){
+            console.log("11");
+        }
+
+        let wyc = new Star('wyc',22);
+        wyc.sing();
+
+        // 一般情况下，我们的公共属性定义到构造函数里，公共方法定义到原型对象里
+    </script>
+</body>
+</html>

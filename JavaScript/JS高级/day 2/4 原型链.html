@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Star(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        Star.prototype = {
+            constructor: Star,
+            sing: function () { console.log(11); },
+            movie: function () { console.log(22); }
+        }
+
+        let wyc = new Star('wyc', 22);
+        wyc.sing();
+        wyc.movie();
+
+        // 只要是对象就有__proto__原型，指向原型对象
+        console.log(Star.prototype);
+        console.log(Star.prototype.__proto__ === Object.prototype);
+        // 我们Star原型对象里面的__proto__原型指向是 Object.prototype
+    </script>
+</body>
+
+</html>

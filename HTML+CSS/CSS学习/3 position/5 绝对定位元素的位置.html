@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 400px;
+            height: 400px;
+            background-color: aqua;
+            position: relative;
+        }
+
+        /*  
+            开启绝对定位后
+                元素居中
+                margin:auto;
+                left/right/bottom/top:0px;
+        */
+
+        .box2{
+            width: 50px;    
+            height: 50px;
+            background-color: orangered;
+            position: absolute;
+            margin:auto;
+            top:0px;
+            bottom:0px;
+            right: 0px;
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

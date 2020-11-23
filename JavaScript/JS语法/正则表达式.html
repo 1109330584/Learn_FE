@@ -1,0 +1,22 @@
+<!-- 邮箱的正则表达式 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let emailReg = /^\w{3,}(\.\w+)*@[A-z0-9]+(\.[A-z]{2,5}){1,2}$/;
+        let email1 = "123@134.com.123";
+        let email2 = "123@415.com.cn";
+
+        console.log(emailReg.test(email1));
+        console.log(emailReg.test(email2));
+
+
+    </script>
+</body>
+</html>

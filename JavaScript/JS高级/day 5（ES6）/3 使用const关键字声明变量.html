@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const声明的 常量（值不可更改） 具有块级作用域
+        // 声明常量时必须赋初始值
+
+        const arr = [100,200];
+        arr[0] = 'a';
+        arr[1] = 'b';
+        console.log(arr);
+        // 此操作没有更改arr常量的内存地址
+
+        // arr = ['a','b']; //此操作改变了arr的内存地址,报错
+    </script>
+</body>
+</html>
